@@ -1,0 +1,7 @@
+node_modules
+.DS_Store
+backup*
+schema
+.env
+appwrite.json
+appwrite.prev.json

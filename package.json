@@ -1,0 +1,35 @@
+{
+  "name": "appwrite-backup-tool",
+  "version": "1.0.0",
+  "description": "AppWrite backup toolset",
+  "scripts": {
+    "appwrite:backup": "node ./scripts/backup.mjs",
+    "appwrite:backup:users": "node ./scripts/backup_users.mjs",
+    "appwrite:restore": "node ./scripts/restore.mjs",    
+    "appwrite:restore:users": "node ./scripts/restore_users.mjs",
+    "appwrite:diff": "node ./scripts/diff.mjs",
+    "appwrite:create-users": "node ./scripts/create-users.mjs",
+    "appwrite:create-collection": "node ./scripts/create-collection.mjs",
+    "appwrite:fetch": "sh ./tools/appwrite_fetch.sh",
+    "appwrite:push": "sh ./tools/appwrite_push.sh",
+    "appwrite:fetch:windows": ".\\tools\\appwrite_fetch.bat",
+    "appwrite:push:windows": ".\\tools\\appwrite_push.bat",
+    "appwrite:start": "cd docker && sh ./run.sh",
+    "appwrite:start:windows": "cd docker & run.bat",
+    "unsafe:remove-backup": "npx -y rimraf backup ./backup",
+    "unsafe:uninstall-appwrite": "sh ./tools/docker_cleanup.sh",
+    "unsafe:add-dummy-data": "node ./scripts/add-dummy-data.mjs"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "appwrite": "^13.0.1",
+    "dotenv": "16.3.1",
+    "glob": "10.3.4",
+    "node-appwrite": "^10.0.1"
+  },
+  "devDependencies": {
+    "@types/glob": "8.1.0"
+  }
+}
